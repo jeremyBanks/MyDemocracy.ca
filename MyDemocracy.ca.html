@@ -2,8 +2,10 @@
 <!-- saved from url=(0205)http://web.archive.org/web/20170208190748/https://www.canada.ca/en/campaign/electoral-reform/learn-about-canadian-federal-electoral-reform/mydemocracyca-online-digital-consultation-engagement-platform.html -->
 <html class="js backgroundsize borderimage csstransitions fontface no-svg details progressbar meter no-mathml cors largeview wb-enable" dir="ltr" lang="en" xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+<script src="lib/jquery-3.1.1.min.js"></script>
+<script src="lib/jquery.stickytableheaders.min.js"></script>
 
-<script src="./jquery-3.1.1.min.js"></script>
+
 <script src="./MyDemocracy.ca_files/svg.min.js"></script><script src="./MyDemocracy.ca_files/en.min.js"></script><script src="./MyDemocracy.ca_files/jquery.magnific-popup.min.js"></script><script async="" src="http://www.googletagmanager.com/gtm.js?id=GTM-TLGQ9K"></script><script async="" src="http://www.googletagmanager.com/gtm.js?id=GTM-MG4LMJ"></script><script type="text/javascript" src="http://web.archive.org/static/js/analytics.js"></script>
 <script type="text/javascript">archive_analytics.values.server_name="wwwb-app18.us.archive.org";archive_analytics.values.server_ms=194;</script>
 <link type="text/css" rel="stylesheet" href="./MyDemocracy.ca_files/banner-styles.css">
@@ -36,6 +38,7 @@
 
 <script>
   $(function() {
+    // Add red bar graphs to % tables
     $(".table-bordered td").each(function() {
       let $this = $(this);
       let val = $this.text().replace(/^\s*(\d+\.?\d*)[*†\s%]*$/, "$1");
@@ -46,8 +49,26 @@
         return;
       $this.css({background: `linear-gradient(90deg, red ${val}%, white ${val + 0.001}%)`});
     });
+
+    // Move header rows into an actaul <thead>
+    $(".table-bordered tr:first-child:has([scope=col])").each(function() {
+      let $this = $(this);
+      let $table = $this.parents("table");
+      $this.remove();
+      $table.append(`<thead>${$this.html()}</thead>`);
+    })
+
+    // Activate sticky headers
+    $(".table-bordered").stickyTableHeaders();
+
   });
 </script>
+
+<style>
+  thead {
+    background-color: white;
+  }
+</style>
     
 
 <script src="./MyDemocracy.ca_files/satelliteLib-78cf42deb149c9766cbaaa6151e252b9b67c0200.js"></script>
@@ -72,12 +93,6 @@
 <link rel="apple-touch-icon" sizes="57x57 72x72 114x114 144x144 150x150" class="wb-favicon" href="http://web.archive.org/etc/designs/canada/wet-boew/assets/favicon-mobile.png"><link href="http://web.archive.org/etc/designs/canada/wet-boew/assets/favicon.ico" rel="icon" type="image/x-icon" class="wb-init wb-favicon-inited">
 <!--<![endif]-->
 
-<!--[if lt IE 9]>
-<link href="/etc/designs/canada/wet-boew/assets/favicon.ico" rel="shortcut icon" />
-<link rel="stylesheet" href="/etc/designs/canada/wet-boew/css/ie8-wet-boew.min.css" />
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="/etc/designs/canada/wet-boew/js/ie8-wet-boew.min.js"></script>
-<![endif]-->
 
 <noscript>&lt;link rel="stylesheet" href="/web/20170208190748cs_/https://www.canada.ca/etc/designs/canada/wet-boew/css/noscript.min.css"/&gt;</noscript>
 <script>dataLayer = []; dataLayer1 = [];</script>
@@ -16336,7 +16351,6 @@ Vox Pop Labs Inc.</p>
 
 
     
-<script type="text/javascript" src="./MyDemocracy.ca_files/jquery.js"></script>
 <script type="text/javascript" src="./MyDemocracy.ca_files/utils.js"></script>
 <script type="text/javascript" src="./MyDemocracy.ca_files/clientlib-publish.js"></script>
 
@@ -16344,7 +16358,6 @@ Vox Pop Labs Inc.</p>
 
 
 <!--[if gte IE 9 | !IE ]><!-->
-<script src="./MyDemocracy.ca_files/jquery.min.js"></script>
 <script src="./MyDemocracy.ca_files/wet-boew.min.js"></script><span id="wb-rsz" class="wb-init">&nbsp;</span>
 <!--<![endif]-->
 
