@@ -1,0 +1,153 @@
+
+
+
+
+
+/*
+     FILE ARCHIVED ON 19:08:00 Feb 8, 2017 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 16:34:22 Feb 27, 2017.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+.visibilityhidden{
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.table-bravo table{
+    width:100%;
+}
+.table-bravo .legend table{
+    width:auto;
+}
+.table-bravo summary {
+    cursor: pointer
+}
+
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.gridcontainer {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.gridcolumn,
+.gridcolumns {
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+}
+
+/* For devices larger than 400px */
+@media (min-width: 400px) {
+    .gridcontainer {
+        width: 85%;
+        padding: 0;
+    }
+}
+
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+    .gridcontainer {
+        width: 80%;
+    }
+
+    .gridcolumn,
+    .gridcolumns {
+        margin-left: 1%;
+    }
+
+    .gridcolumn:first-child,
+    .gridcolumns:first-child {
+        margin-left: 0;
+    }
+
+    .one.gridcolumn,
+    .one.gridcolumns {
+        width: 4.66666666667%;
+    }
+
+    .two.gridcolumns {
+        width: 13.3333333333%;
+    }
+
+    .three.gridcolumns {
+        width: 22%;
+    }
+
+    .four.gridcolumns {
+        width: 30.6666666667%;
+    }
+
+    .five.gridcolumns {
+        width: 39.3333333333%;
+    }
+
+    .six.gridcolumns {
+        width: 48%;
+    }
+
+    .seven.gridcolumns {
+        width: 56.6666666667%;
+    }
+
+    .eight.gridcolumns {
+        width: 65.3333333333%;
+    }
+
+    .nine.gridcolumns {
+        width: 74.0%;
+    }
+
+    .ten.gridcolumns {
+        width: 82.6666666667%;
+    }
+
+    .eleven.gridcolumns {
+        width: 91.3333333333%;
+    }
+
+    .twelve.gridcolumns {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .one-third.gridcolumn {
+        width: 30.6666666667%;
+    }
+
+    .two-thirds.gridcolumn {
+        width: 65.3333333333%;
+    }
+
+    .one-half.gridcolumn {
+        width: 48%;
+    }
+
+}
+
+/* Clearing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Self Clearing Goodness */
+.gridcontainer:after,
+.gridrow:after,
+.u-cf {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
