@@ -58,6 +58,19 @@
       $table.append(`<thead>${$this.html()}</thead>`);
     })
 
+    // Add the previous heading to the table header
+    let lastHeader = null;
+    $("h1, h2, h3, h4, h5, .table-bordered").each(function() {
+      if (this.tagName.match(/^H/)) {
+        lastHeader = this;
+        return;
+      }
+
+      if (!lastHeader)
+        return;
+      $(this).find("thead").prepend(`<tr><td colspan="999" class="table-added-header"><div class="inner">${lastHeader.innerText}</div></td></tr>`);
+    });
+
     // Activate sticky headers
     $(".table-bordered").stickyTableHeaders();
 
@@ -68,6 +81,15 @@
   thead {
     background-color: white;
   }
+
+  .table-added-header {
+    font-weight: bold;
+  }
+
+  .table-added-header .inner {
+    margin: 5px 20px;
+  }
+
 </style>
     
 
